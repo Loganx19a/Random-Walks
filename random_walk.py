@@ -23,8 +23,8 @@ class RandomWalk:
         # keep taking steps until the walk reaches the desired length.
         while len(self.x_values) < self.num_points:
 
-            x_step = get_step()
-            y_step = get_step()
+            x_step = self.get_step()
+            y_step = self.get_step()
 
             # reject moves that go nowhere
             if x_step == 0 and y_step == 0:
@@ -38,7 +38,7 @@ class RandomWalk:
             self.x_values.append(x)
             self.y_values.append(y)
 
-    def get_step():
+    def get_step(self):
         direction = choice([1, -1])             # which direction will the walk go?
         distance = choice([0, 1, 2, 3, 4])      # how far will it go in that direction?
         step = direction * distance 
