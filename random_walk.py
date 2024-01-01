@@ -40,6 +40,6 @@ class RandomWalk:
             x = self.x_values[-1] + x_step   # add the value in x_step to the last value stored in x_values
             y = self.y_values[-1] + y_step   # and do the same for the y-values
 
-            # now that we have the new point's coordinates, we append them to the lists: x_values and y_values
+            # once we have the new point's coordinates, append them to the lists: x_values and y_values
             self.x_values.append(x)
             self.y_values.append(y)
